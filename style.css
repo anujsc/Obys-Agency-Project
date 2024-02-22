@@ -1,0 +1,503 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   font-family: "plain light";
+    color:white;
+    
+}
+
+html,body{
+    /* height: 100%; */
+    width: 100%;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+#crsr{
+    height: 2.3vw;
+    width: 2.3vw;
+    border: 1px solid rgb(193, 187, 187) ;
+    border-radius: 50%;
+    position: fixed;
+    mix-blend-mode: difference;
+    z-index: 9999;
+    transform: translate(-50%,-50%);  
+}
+
+#loader{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: #0b0b0b;
+    padding:25vh 10vw ;
+}
+
+.line{
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    gap: 3vw;
+}
+
+#line1p1{
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    gap: 1vh;
+    
+}
+
+#line1p1 h5,#line1p1 h6{
+    font-size: 3vw;
+    font-family: "silk serif";
+
+}
+
+#line1p1 h5{
+    width:5vw ;
+    text-align: center;
+}
+
+.line h1{
+    font-size: 6.5vw;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.line h2{
+    font-size: 5vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    opacity: 0;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes anime{
+    0%{
+        font-family: "plain light";
+        -webkit-text-stroke: white ;
+        color: #fff;
+        font-weight: 500;
+        opacity: 1;
+    }
+    47%{
+        font-family: "plain light";
+        -webkit-text-stroke: white ;
+        color: #fff;
+        font-weight: 500;
+        opacity: 0;
+    }
+    50%{
+        font-family: "silk serif";
+        -webkit-text-stroke:1px solid white ;
+        color: #fff;
+        font-weight: 500;
+        opacity: 1;
+    }
+    100%{
+        font-family: "silk serif";
+        -webkit-text-stroke:1px solid white ;
+        color: #fff;
+        font-weight: 500;
+        opacity: 0;
+    }
+}
+
+
+
+
+#main{
+    position: relative;
+    background-color: #030303;
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    background-color: #151515 ;
+}
+
+#page1 #nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.3vw 5.3vw;
+}
+
+#nav2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+}
+#nav2 h4{
+    font-size: 0.8 vw;
+    font-weight: 500;
+}
+.hero{
+    width: 72%;
+    margin-left: 27%;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+}
+/* #hero1{
+    position: relative;
+} */
+
+.hero:nth-child(2){
+    margin-top: 18vh;
+}
+.hero h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    line-height: 7vw;
+    position: relative;
+}
+#hero1::before{
+    content:"01";
+    position:absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: 20%;
+    top: 29%;
+    
+}
+
+.hero h2{
+    font-size: 7vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 7vw;
+    border-bottom: 0.5vw solid white;
+    padding-bottom: 0.8vw;   
+}
+
+.hero h2:hover{
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+}
+
+#page2{
+    height: 100vh;
+    width: 100%;
+    padding-top: 17vh;
+    position: relative;
+    background-color: #151515 ;
+}
+
+#videocontainer{
+    height:66vh;
+    width: 71vw;
+    left: 27%;
+    position: relative;
+    background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg);
+}
+#videocontainer img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    top: 0;
+}
+#videocontainer video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#videocursor{
+    background-color: #ffa63d;
+    height: 8.5vw;
+    width: 8.5vw;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left:80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+#videocursor i{
+    font-size: 2.5vw;
+}
+
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #151515;
+    position: relative;
+    padding: 7vh ;
+   
+}
+#page3 h1::before{
+    content:"02";
+    position:absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: -13%;
+    top: 8%; 
+}
+
+#page3 h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+    margin-left: 24vw;
+}
+
+#page3 .underline{
+    margin-left: 24vw;
+}
+#imgdivcont{
+    background-color: #3f7df4;
+    padding: 1vw;
+    position: relative;
+}
+.imgdiv img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;       
+}
+.imgdiv{
+    height: 33vw;
+    width: 23vw;
+    background-color: #ffa63d;
+    position: relative;
+    overflow: hidden;
+}
+
+
+#page4{
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: #323232; */
+    position: relative;
+    padding-top: 7vh;
+}
+
+#page4content{
+    width: 72vw;
+    margin-left: 28%;
+    position: relative;
+}
+
+#page4content h1::before{
+    content:"03";
+    position:absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: -12%;
+    top: 8%;
+    
+}
+
+#page4content h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+}
+
+#page4content .underline{
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    margin: 5vw 0;
+    /* margin-bottom: 5vh; */
+
+}
+#page4content  #para1{
+    font-size: 2.05vw;
+    width: 50%;
+    margin-bottom: 3vw;
+}
+#page4flex{
+    display: flex;
+
+}
+
+#page4flex img{
+    width: 48%;
+     
+}
+
+#page4flex p{
+    font-size:1.1vw ;
+    width: 19%;
+    margin-left: 1vw;
+}
+
+#page4blue{
+    background-color:#3f7df4  ;
+    width: 33vw;
+    padding: 3vw;
+    position: relative;
+    margin-top: -32vh;
+    margin-left: 33%;
+}
+
+.bluedivelem{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    /* background-color: #ffa63d; */
+    padding: 2vw 0;
+    border-bottom: 2px solid white;
+}
+
+.bluedivelem p{
+    width: 40%;
+    font-size: 1vw;
+
+
+}
+
+.bluedivelem h4{
+    font-size: 1.5vw;
+    font-weight: 400;
+}
+
+
+#page5{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.elem{
+    /* background-color: #de1010; */
+    white-space: nowrap; 
+    overflow-x: hidden;
+    margin-bottom: 1vw;
+}
+
+.elem h1{
+    font-size: 7vw;
+    font-weight: 400;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    display: inline-block;
+    margin-right: 16px;
+    animation-name: animea;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes animea{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+
+}
+
+.elem2{
+    /* background-color: #de1010; */
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-bottom: 1vw;
+}
+
+.elem2 h1{
+    font-size: 7vw;
+    font-weight: 400;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    display: inline-block;
+    margin-right: 16px;
+    animation-name: animea;
+    animation-duration: 13s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    
+}
+
+.elem span{
+    font-style: italic;
+    font-family: "silk selif";
+     color: transparent;
+}
+.elem2 span{
+    font-style: italic;
+    font-family: "silk selif";
+     color: transparent;
+}
+
+#page6{
+    height: 85vh;
+    width: 100%;
+    /* background-color: #ffa63d; */
+    position: relative;
+    padding-left: 28vw;
+}
+
+#page6 h1{
+    font-size:7vw ;
+    text-transform: uppercase;
+    position: relative;
+}
+
+#page6 h1::before{
+    content:"04";
+    position:absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: -12%;
+    top: 8%;
+    
+}
+.underline{
+    height: 1px;
+     width: 100%;
+     background-color: #fff;
+     margin: 3vw 0;
+}
+
+#footer{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-right: 15vw;
+    padding-top: 4vw;
+    margin-bottom: 3vw;
+}
+.box{
+    width: 20%;
+}
+
+#footer h6{
+   font-size: 0.9vw;
+   margin-bottom: 1.5vw;
+}
+#footer h5{
+    font-size: 1.4vw;
+    font-weight: 500;
+    margin: 0.2vh 0;
+}
+
+#copyright{
+    font-size: 1vw;
+    font-weight: 300;
+}
