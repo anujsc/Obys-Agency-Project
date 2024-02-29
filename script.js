@@ -176,7 +176,7 @@ function sheryAnime(){
 loadinganimation()
 cursoranime()
 
-locomotive()
+// locomotive()
 sheryAnime()
 
 document.addEventListener("mousemove",function(dets){
